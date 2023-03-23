@@ -45,6 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter--;
     });
   }
+  void _resetCounter() {
+    setState(() {
+
+      _counter=0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ElevatedButton(onPressed: _incrementCounter, child: Icon(Icons.add),)
               ],
             ),
+            TextButton(onPressed: _resetCounter, child: Text("Сбросить", style: TextStyle(color: Colors.grey),))
           ],
         ),
 
